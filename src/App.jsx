@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
-import Home from '../components/Home';
-import Auth from '../pages/Auth';
-import Contact from '../pages/Contact';
-import Collection from '../pages/Collection';
-import Cart from '../pages/Cart';
+import Home from './components/Home';
+import Auth from './pages/Auth';
+import Contact from './pages/Contact';
+import Collection from './pages/Collection';
+import Cart from './pages/Cart';
 
 export default function App() {
   return (
