@@ -389,7 +389,7 @@ export default function Home() {
             <img 
               src="https://i.pinimg.com/736x/25/97/be/2597bed8f5e99743cb23f8b61bc834a1.jpg" 
               alt="Artisan crafting handbag" 
-              className="ml-30 w-130 h-170"
+              className="ml-25 w-130 h-170"
             />
             <div className="absolute bottom-0 left-0 w-3/4 h-3/4 border border-[#D4A56A]/20 -z-10 -translate-x-8 translate-y-8"></div>
           </motion.div>
