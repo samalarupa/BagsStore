@@ -14,7 +14,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#3A2D1E] bg-opacity-95 backdrop-blur-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-black bg-opacity-95 backdrop-blur-md z-50">
       <div className="container mx-auto px-8 py-6 flex justify-between items-center">
         <Link to="/" className="text-3xl font-serif text-[#F5E9D9] tracking-widest">AURUM</Link>
         <div className="hidden md:flex space-x-12">

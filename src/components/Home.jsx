@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { ChevronRight, CheckCircle, Star, Quote, ArrowUp, Heart } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -11,10 +11,9 @@ export default function Home() {
 
   // Luxury hero carousel images
   const heroImages = [
-    "https://i.pinimg.com/474x/da/00/35/da00353fc908168d1de7c87f19f89b64.jpg",
-    "https://img.freepik.com/free-photo/bag-hanging-from-furniture-item-indoors_23-2151073531.jpg?uid=R188609290&ga=GA1.1.2010036971.1739466765&semt=ais_hybrid&w=740",
+    "https://i.pinimg.com/736x/31/32/88/31328878a23414a4785c0aa47e682005.jpg",
+    "https://i.pinimg.com/474x/c0/05/a8/c005a84116e0ebf12e2c1bbf824e4c16.jpg",
     "https://i.pinimg.com/736x/39/2f/32/392f323b2e8f5c4d66a415992eabcfd3.jpg"
-    
   ];
 
   useEffect(() => {
@@ -57,7 +56,7 @@ export default function Home() {
           <motion.div 
             className="absolute inset-0 opacity-5"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.05 }}
+            animate={{ opacity: 0.01 }}
             transition={{ duration: 1.5 }}
           >
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -69,30 +68,17 @@ export default function Home() {
             </svg>
           </motion.div>
 
-          {/* Gold accent animated lines */}
-          <motion.div 
-            className="absolute h-full w-1 left-1/3 top-0 bg-gradient-to-b from-[#D4A56A]/0 via-[#D4A56A]/30 to-[#D4A56A]/0"
-            initial={{ scaleY: 0, opacity: 0 }}
-            animate={{ scaleY: 1, opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-          />
-          <motion.div 
-            className="absolute h-full w-1 left-2/3 top-0 bg-gradient-to-b from-[#D4A56A]/0 via-[#D4A56A]/30 to-[#D4A56A]/0"
-            initial={{ scaleY: 0, opacity: 0 }}
-            animate={{ scaleY: 1, opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.5 }}
-          />
-
           {/* Image carousel */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 flex items-center justify-center mt-25">
             {heroImages.map((img, index) => (
               <motion.div
                 key={index}
-                className="absolute inset-0"
-                initial={{ opacity: 0 }}
+                className="absolute inset-0 flex items-center justify-center"
+                initial={{ opacity: 0, translateX: '20%' }}
                 animate={{ 
-                  opacity: currentImageIndex === index ? 0.6 : 0,
-                  scale: currentImageIndex === index ? 1 : 1.1
+                  opacity: currentImageIndex === index ? 1 : 0,
+                  scale: currentImageIndex === index ? 1 : 1.1,
+                  translateX: '20%'
                 }}
                 transition={{ 
                   opacity: { duration: 1.2, ease: "easeInOut" },
@@ -102,14 +88,14 @@ export default function Home() {
                 <img 
                   src={img} 
                   alt={`Luxury handbag showcase ${index + 1}`} 
-                  className="w-full h-180 object-contain  ml-45" 
+                  className="w-full max-w-[800px] h-[80vh] object-contain"
                 />
               </motion.div>
             ))}
           </div>
 
           {/* Gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#3A2D1E] via-[#3A2D1E]/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3A2D1E]/70 via-[#3A2D1E]/50 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#3A2D1E]/70 via-transparent to-transparent"></div>
 
           {/* Gold decorative elements */}
@@ -403,7 +389,7 @@ export default function Home() {
             <img 
               src="https://i.pinimg.com/736x/25/97/be/2597bed8f5e99743cb23f8b61bc834a1.jpg" 
               alt="Artisan crafting handbag" 
-              className=" ml-30 w-130 h-170"
+              className="ml-30 w-130 h-170"
             />
             <div className="absolute bottom-0 left-0 w-3/4 h-3/4 border border-[#D4A56A]/20 -z-10 -translate-x-8 translate-y-8"></div>
           </motion.div>
@@ -413,7 +399,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <p className="text-[#D4A56A] tracking-[0.4em] text-sm mb-6  mr-5 font-light">OUR PHILOSOPHY</p>
+            <p className="text-[#D4A56A] tracking-[0.4em] text-sm mb-6 mr-5 font-light">OUR PHILOSOPHY</p>
             <h3 className="text-3xl font-serif text-[#F5E9D9] mb-8">Where Tradition Meets Innovation</h3>
             <p className="text-[#F5E9D9]/80 mb-6 font-light leading-relaxed">
               Each AURUM creation manifests generations of expertise, where traditional techniques harmonize with contemporary innovation to produce works of unparalleled excellence.

@@ -5,6 +5,8 @@ import Auth from './Pages/Auth';
 import Contact from './Pages/Contact';
 import Collection from './Pages/Collection';
 import Cart from './Pages/Cart';
+import About from './components/About';
+
 
 export default function App() {
   return (
@@ -16,6 +18,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/collections" element={<Collection />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

@@ -66,7 +66,7 @@ export default function Collection() {
       id: 7,
       title: "Bespoke Mini Bag",
       price: 10999.00,
-      imageUrl: "https://i.pinimg.com/474x/8b/ff/74/8bff74ad9a9567497b139b990160d72d.jpg",
+      imageUrl: "https://i.pinimg.com/736x/c2/69/56/c26956843f0ee24ae5ce3f1d08b4bbbd.jpg",
       collection: "Bespoke",
       isNew: true,
     },
@@ -74,7 +74,7 @@ export default function Collection() {
       id: 8,
       title: "Sovereign Hobo Bag",
       price: 11999.00,
-      imageUrl: "https://images.unsplash.com/photo-1615390681832-135e3cd51f03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=90",
+      imageUrl: "https://i.pinimg.com/736x/31/32/88/31328878a23414a4785c0aa47e682005.jpg",
       collection: "Bespoke",
       rating: 5,
     }

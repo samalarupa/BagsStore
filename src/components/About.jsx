@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function About() {
   return (
     <div className="w-full bg-[#3A2D1E] font-sans pt-24">
+       <Navbar />
       <section className="container mx-auto px-8 py-24">
         <motion.h1
           className="text-4xl md:text-5xl font-serif text-[#F5E9D9] mb-16 text-center relative after:content-[''] after:absolute after:w-16 after:h-px after:bg-[#D4A56A] after:-bottom-6 after:left-1/2 after:-translate-x-1/2"
